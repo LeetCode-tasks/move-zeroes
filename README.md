@@ -24,3 +24,20 @@ _Constraints:_
 `1 <= nums.length <= 10^4`
 
 `-2^31 <= nums[i] <= 2^31 - 1`
+
+
+# Solution in JavaScript
+```
+var moveZeroes = function(nums) {
+    let index = 0;
+        for(let i=0; i<nums.length; i++){
+            if(nums[i] != 0){
+                nums[index++] = nums[i];
+            }
+        }
+        
+        for(let i = index; i<nums.length; i++){
+            nums[i] = 0;
+        }
+};
+```
